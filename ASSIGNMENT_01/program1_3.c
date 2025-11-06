@@ -8,7 +8,7 @@ void Display()
     while(i >= 0)
     {
         printf("%d",i);
-        i++;
+        i--;
     }
 }
 
