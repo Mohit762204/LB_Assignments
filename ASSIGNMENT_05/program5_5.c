@@ -1,19 +1,36 @@
 #include<stdio.h>
 
-void Accept(int iNo)
+int FindLargest(int x, int y, int z)
 {
-    int iCnt = 0;
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    if(x > y && x > z)
     {
-        printf(" * ");
+        return x;
+    }
+
+    else if(y > x && y > z)
+    {
+        return y;
+    }
+
+    else
+    {
+        return z;
     }
 }
+
 int main()
 {
-    int iValue = 0;
-    iValue = 5;
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    int result = 0;
 
-    Accept(iValue);
+    printf("Enter Three numbers : \n");
+    scanf("%d %d %d", &a, &b, &c);
+
+    result = FindLargest(a, b, c);
+    
+    printf("Largest number is : %d\n",result);
 
     return 0;
 }

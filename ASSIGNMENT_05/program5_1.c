@@ -1,25 +1,26 @@
 #include<stdio.h>
 
-int Divide(int iNo1, int iNo2 )
+void CheckEvenOdd(int num)
 {
-    int iAns = 0 ;
-    if(iNo2 == 0)
+    if(num % 2 == 0)
     {
-        return -1;
+        printf("%d is a Even number.",num);
     }
-    
-    iAns = iNo1 / iNo2 ;
 
+    else
+    {
+        printf("%d is a Odd number.",num);
+    }
 }
 
 int main()
 {
-    int iValue1 = 15 , iValue2 = 5;
-    int iRet = 0;
+    int number = 0;
 
-    iRet = Divide(iValue1 , iValue2);
+    printf("Enter number : \n");
+    scanf("%d",&number);
 
-    printf("Division is %d", iRet);
+    CheckEvenOdd(number);
 
-    return 0 ;
+    return 0;
 }

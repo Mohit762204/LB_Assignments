@@ -1,35 +1,31 @@
 #include<stdio.h>
-#include<stdbool.h>
-int Check(int iNo)
+
+void CheckNumberType(int num)
 {
-    if((iNo % 5) == 0)
+    if(num > 0)
     {
-        return true;
+        printf("%d is a Positive number.",num);
     }
+
+    else if(num < 0)
+    {
+        printf("%d is a Negative number.",num);
+    }
+
     else
     {
-        return false;
+        printf("%d is a Zero.",num);
     }
 }
+
 int main()
 {
-    int iValue = 0 ;
-    bool bRet = false ;
+    int number = 0;
 
-    printf("Enter Number :");
-    scanf("%d",&iValue);
+    printf("Enter number : \n");
+    scanf("%d", &number);
 
-    bRet = Check(iValue);
+    CheckNumberType(number);
 
-    if(bRet == true)
-    {
-        printf(" Divisible by 5");
-    }
-    else
-    {
-        printf(" Not Divisible by 5");
-
-    }
-
-    return 0 ;
+    return 0;
 }

@@ -1,16 +1,30 @@
 #include<stdio.h>
 
-void Display()
+int FindMax(int iNo1, int iNo2)
 {
-    int i = 0;
-    for(i = 1; i <= 5; i++)
+    if(iNo1 > iNo2)
     {
-        printf("Marvellous...\n");
+        return iNo1;
+    }
+
+    else
+    {
+        return iNo2;
     }
 }
+
 int main()
 {
-    Display();
+    int num1 = 0;
+    int num2 = 0;
+    int result = 0;
 
-    return 0 ;
+    printf("Enter 2 numbers : \n");
+    scanf("%d %d",&num1,&num2);
+
+    result = FindMax(num1, num2);
+
+    printf("Maximum is : %d\n",result);
+
+    return 0;
 }

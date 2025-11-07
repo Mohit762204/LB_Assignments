@@ -1,18 +1,36 @@
 #include<stdio.h>
 
-void Display()
+void CheckLeapYear(int year)
 {
-    int i = 0;
-    i = 5;
-    while(i >= 1)
+    if(year % 400 == 0)
     {
-        printf("%d",i);
-        i--;
+        printf("%d is a leap year.",year);
+    }
+
+    else if(year % 100 == 0)
+    {
+        printf("%d is not a leap year.",year);
+    }
+
+    else if(year % 4 == 0)
+    {
+        printf("%d is a leap year.",year);
+    }
+
+    else
+    {
+        printf("%d is not a leap year.",year);
     }
 }
+
 int main()
 {
-    Display();
+    int year;
 
-    return 0 ;
+    printf("Enter year : \n");
+    scanf("%d",&year);
+
+    CheckLeapYear(year);
+
+    return 0;
 }
