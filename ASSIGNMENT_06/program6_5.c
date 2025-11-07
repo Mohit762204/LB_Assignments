@@ -13,7 +13,7 @@
 //  Input :         Int, Int
 //  Output :        FLoat
 //  Author :        Mohit Sandip Zalte
-//  Date :          04/11/2025
+//  Date :          28/10/2025
 //
 ///////////////////////////////////////////////////////////////////////////
 
@@ -41,8 +41,9 @@ float percentage(
 
 int main()
 {
-    int iTotal = 0, iObtained = 0;
-    float fRet = 0.0;
+    int iTotal = 0;                         // To Store Total Marks
+    int iObtained = 0;                      // To Store Obtained Marks
+    float fRet = 0.0;                       // To Store calculater percentage
 
     printf("Please Enter Total Marks : ");
     scanf("%d", &iTotal);
@@ -50,9 +51,9 @@ int main()
     printf("Please Enter Obtained Marks : ");
     scanf("%d", &iObtained);
 
-    fRet = percentage(iTotal, iObtained);
+    fRet = percentage(iTotal, iObtained);           // Function Call
 
-     if(fRet == -1.0)                                            
+     if(fRet == -1.0)                               // 0 Division Handler             
     {
         printf("Error : Total Marks Cannot be 0. Try Again.");
     }
