@@ -24,11 +24,11 @@ int main()
 
     if(bRet == true)
     {
-        printf(" equal ");
+        printf("equal ");
     }
     else
     {
-        printf("  not equal ");
+        printf("not equal ");
     }
 
     return 0 ;

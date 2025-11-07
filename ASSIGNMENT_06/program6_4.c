@@ -2,13 +2,17 @@
 
 int multiply(int iNo1 ,int iNo2, int iNo3)
 {
-    if(iNo1 == 0, iNo2 == 0, iNo3 == 0)
-    {
-        printf("One of the numbers is 0. Multiplication will be 0.\n");
-    
-        return 0;
-    }
-    return iNo1*iNo2*iNo3;
+    int result = 1;
+
+    if (iNo1 != 0)
+        result = result * iNo1;
+
+    if (iNo2 != 0)
+        result = result * iNo2;
+    if (iNo3 != 0)
+        result = result * iNo3;
+
+        return result;
 }
 int main()
 {
