@@ -17,20 +17,22 @@
 //
 //////////////////////////////////////////////////////////////////
 
-void Display(int iNo)
+void Display(
+                int iNo                         // Store user Value
+            )
 {
-    int iCnt = 0;
+    int iCnt = 0;                               //  Counter for loop 
 
     if(iNo < 0 )
     {
         iNo = -iNo;
     }
 
-    for(iCnt = -iNo ; iCnt <= iNo; iCnt++)
+    for(iCnt = -iNo ; iCnt <= iNo; iCnt++)              // business logic
     {
         printf(" %d ",iCnt);
     }
-}
+}   // End of Display()
 
 //////////////////////////////////////////////////////////////////
 //
@@ -40,15 +42,15 @@ void Display(int iNo)
 
 int main()
 {
-    int iValue = 0;
+    int iValue = 0;                             // to store user input
 
     printf(" Enter Number : ");
     scanf("%d",&iValue);
 
-    Display(iValue);
+    Display(iValue);                        // function call
 
     return 0;
-}
+}   // End of main()
 
 //////////////////////////////////////////////////////////////////
 //

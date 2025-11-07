@@ -1,20 +1,69 @@
+//////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+//////////////////////////////////////////////////////////////////////////
+
 #include<stdio.h>
 
-void Display(int iNo)
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description :   Display numbers Till N
+//  Input :         integer
+//  Output :        numbers
+//  Author :        Mohit Sandip Zalte
+//  Date :          29/10/2025
+//
+///////////////////////////////////////////////////////////////////////////
+
+void Display(
+                int iNo                     // Store user Value
+            )
 {
-    int iCnt = 0;
+    int iCnt = 0;                           // Counter
+
     for(iCnt = 1; iCnt <= iNo; iCnt++)
     {
         printf(" %d ",iCnt);
     }
-}
+}   // End of Display()
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Main Function
+//
+//////////////////////////////////////////////////////////////////////////
+
 int main()
 {
-    int iValue = 0;
+    int iValue = 0;                         // To Store user input
+
     printf("Enter Number :");
     scanf("%d",&iValue);
 
-    Display(iValue);
+    Display(iValue);                        // Function call
 
     return 0 ;
-}
+}   // End of main()
+
+//////////////////////////////////////////////////////////////////////////
+//
+//                          TEST CASES
+//
+//  1. Input : 1             Output : 1   
+//  2. Input : 2             Output : 1  2  
+//  3. Input : 3             Output : 1  2  3  
+//  4. Input : 4             Output : 1  2  3  4
+//
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+//
+//                          Time Complexity :
+//
+//  1. In Display() function there i a while loop , which is 
+//     dependent on user input that is n
+//     Therefore Time Complexity : O(n);
+//
+//////////////////////////////////////////////////////////////////

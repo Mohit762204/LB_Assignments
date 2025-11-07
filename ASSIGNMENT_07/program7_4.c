@@ -1,6 +1,25 @@
+//////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+//////////////////////////////////////////////////////////////////////////
+
 #include<stdio.h>
 
-void OddDisplay(int iNo)
+//////////////////////////////////////////////////////////////////
+//
+//  Function Name : OddDisplay
+//  Description :   Displays all Odd Numbers upto N
+//  Input :         Int
+//  Output :        String
+//  Author :        Sumit Satishkumar Shastri
+//  Date :          28/11/2025
+//
+//////////////////////////////////////////////////////////////////
+
+void OddDisplay(
+                    int iNo             // Store user Value
+                )
 {
     int iCnt = 0;
     for(iCnt = 0; iCnt <= iNo; iCnt++)
@@ -10,14 +29,44 @@ void OddDisplay(int iNo)
             printf(" %d ",iCnt);
         }
     }
-}
+} // End of OddDisplay ()
+
+//////////////////////////////////////////////////////////////////
+//
+//  Main Function
+//
+//////////////////////////////////////////////////////////////////
+
 int main()
 {
-    int iValue = 0;
+    int iValue = 0;                         // To Store user input
+
     printf("Enter Number : ");
     scanf("%d",&iValue);
 
-    OddDisplay(iValue);
+    OddDisplay(iValue);                     // Function call
 
     return 0;
-}
+} // End of main()
+
+//////////////////////////////////////////////////////////////////
+//
+//                          TEST CASES :
+//
+//  1. Input : 15    Output : 1 3 5 7 9 11 13 15 
+//
+//  2. Input : 20    Output : 1 3 5 7 9 11 13 15 17 19
+//
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+//
+//                          Time Complexity :
+//
+//  1. In Odd Display there is a forLoop, which
+//     Takes Input N and runs loops for N times.
+//     
+//     
+//     Therefore, Time Complexity is : O(n)
+//
+//////////////////////////////////////////////////////////////////
