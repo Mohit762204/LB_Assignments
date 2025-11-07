@@ -21,4 +21,6 @@ int main()
     scanf("%d",&iValue);
 
     bRet = CheckEven(iValue);
+
+    return 0;  
 }

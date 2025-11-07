@@ -24,11 +24,11 @@ int main()
 
     if(bRet == true)
     {
-         printf("Divisible by 5 \n ");
+         printf("Number is Divisible by 5 \n ");
     }
     else 
     {
-         printf("Not Divisible by 5 \n ");
+         printf("Number is Not Divisible by 5 \n ");
     }
 
     return 0 ;
