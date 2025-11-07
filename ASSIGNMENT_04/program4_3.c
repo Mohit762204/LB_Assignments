@@ -12,7 +12,7 @@ void NonFact(int iNo)
     {
         if((iNo % iCnt) != 0)
         {
-            printf("%d\n",iCnt);
+            printf("%d ",iCnt);
         }
     }
 }
