@@ -1,28 +1,87 @@
+/////////////////////////////////////////////////////////////////////////
+//
+//                      Required Header Files
+//
+/////////////////////////////////////////////////////////////////////////
 #include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Number
+//  Description   : Displays Small / Medium / Large based on input number.
+//  Input         : Integer (iNo)
+//  Output        : Prints category on screen
+//  Author        : Mohit Sandip Zalte
+//  Date          : 29/10/2025
+//
+/////////////////////////////////////////////////////////////////////////
 
 void Number(int iNo)
 {
     if(iNo <= 50)
     {
-        printf("small \n");
+        printf("Small\n");
     }
     else if(iNo <= 100)
     {
-        printf("medium \n");
+        printf("Medium\n");
     }
     else
     {
-        printf("Large \n");
+        printf("Large\n");
     }
-}
+}   // End of Number()
+
+/////////////////////////////////////////////////////////////////////////
+//
+//                            Main Function
+//
+/////////////////////////////////////////////////////////////////////////
+
 int main()
 {
-    int iValue = 0;
+    int iValue = 0;     // Number to categorize
 
     printf("Enter Number : ");
-    scanf("%d",&iValue);
+    scanf("%d", &iValue);
 
     Number(iValue);
 
     return 0;
-}
+}   // End of main()
+
+/////////////////////////////////////////////////////////////////////////
+//
+//                              TEST CASES
+//
+//  1. Input : 25
+//     Output : Small
+//
+//  2. Input : 80
+//     Output : Medium
+//
+//  3. Input : 150
+//     Output : Large
+//
+//  4. Input : 50
+//     Output : Small
+//
+//  5. Input : 100
+//     Output : Medium
+//
+/////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+//
+//
+//                      Time Complexity :
+//
+//  Number() performs constant comparisons.
+//  Therefore : O(1)
+//
+//                      Space Complexity :
+//
+//  Uses only fixed variables.
+//  Therefore : O(1)
+//
+//////////////////////////////////////////////////////////////////
