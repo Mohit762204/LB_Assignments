@@ -22,7 +22,7 @@ typedef int BOOL;
 //  Input         : Integer Array, Integer (Size of array), Integer (Number to search)
 //  Output        : BOOL (TRUE if found, FALSE otherwise)
 //  Author        : Mohit Sandip Zalte
-//  Date          : 30/10/2025
+//  Date          : 23/10/2025
 //
 /////////////////////////////////////////////////////////////////////////
 
