@@ -13,7 +13,7 @@
 //  Input         : Integer Array, Integer (Size of array), Integer (Number to search)
 //  Output        : Integer (Frequency of iNo)
 //  Author        : Mohit Sandip Zalte
-//  Date          : 30/11/2025
+//  Date          : 23/11/2025
 //
 /////////////////////////////////////////////////////////////////////////
 
