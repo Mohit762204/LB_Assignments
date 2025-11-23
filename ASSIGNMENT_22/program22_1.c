@@ -13,7 +13,7 @@
 //  Input         : Integer Array, Integer (Size of array)
 //  Output        : Integer (Count of even numbers)
 //  Author        : Mohit Sandip Zalte
-//  Date          : 29/11/2025
+//  Date          : 23/11/2025
 //
 /////////////////////////////////////////////////////////////////////////
 

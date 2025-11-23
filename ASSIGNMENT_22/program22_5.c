@@ -8,37 +8,34 @@
 
 /////////////////////////////////////////////////////////////////////////
 //
-//  Function Name : FrequencyDiff
-//  Description   : Returns difference between count of even and odd numbers.
-//  Input         : Integer Array, Integer (Size of array)
-//  Output        : Integer (EvenCount - OddCount)
+//  Function Name : Frequency
+//  Description   : Returns frequency of given number (iNo) in the array.
+//  Input         : Integer Array, Integer (Size of array), Integer (Number to search)
+//  Output        : Integer (Frequency of iNo)
 //  Author        : Mohit Sandip Zalte
-//  Date          : 23/11/2025
+//  Date          : 30/11/2025
 //
 /////////////////////////////////////////////////////////////////////////
 
-int FrequencyDiff(
-                    int Arr[],         // Array of numbers
-                    int iLength        // Number of elements
-                  )
+int Frequency(
+                int Arr[],         // Array of numbers
+                int iLength,       // Number of elements
+                int iNo            // Number to search
+             )
 {
     int iCnt = 0;
-    int EvenCount = 0;
-    int OddCount = 0;
+    int Count = 0;
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
-        if((Arr[iCnt] % 2) == 0)      // Even number
+        if(Arr[iCnt] == iNo)       // Check for the given number
         {
-            EvenCount++;
-        }
-        else                          // Odd number
-        {
-            OddCount++;
+            Count++;
         }
     }
-    return EvenCount - OddCount;
-}   // End of FrequencyDiff()
+
+    return Count;
+}   // End of Frequency()
 
 /////////////////////////////////////////////////////////////////////////
 //
@@ -50,11 +47,15 @@ int main()
 {
     int iSize = 0;        // To store number of elements
     int iCnt = 0;         // Loop counter
+    int iValue = 0;       // Number whose frequency is to be found
     int iRet = 0;         // To store result
     int *p = NULL;        // Pointer to dynamic array
 
     printf("Enter Number Of Elements : ");
     scanf("%d",&iSize);
+
+    printf("Enter Number to Find Its Frequency : ");
+    scanf("%d",&iValue);
 
     p = (int*)malloc(iSize * sizeof(int));   // Memory allocation
 
@@ -72,9 +73,9 @@ int main()
         scanf("%d",&p[iCnt]);
     }
 
-    iRet = FrequencyDiff(p, iSize);
+    iRet = Frequency(p, iSize, iValue);
 
-    printf("Difference (Even - Odd) is : %d\n", iRet);
+    printf("Frequency of %d is : %d\n", iValue, iRet);
 
     free(p);   // Release memory
 
@@ -85,21 +86,25 @@ int main()
 //
 //                              TEST CASES
 //
-//  1. Input : 6 → 10 21 30 41 50 61
-//     Even = 3, Odd = 3
+//  1. Input : N = 6
+//     Elements : 10 20 30 20 40 20
+//     iNo = 20
+//     Output : 3
+//
+//  2. Input : N = 5
+//     Elements : 1 2 3 4 5
+//     iNo = 3
+//     Output : 1
+//
+//  3. Input : N = 7
+//     Elements : 11 11 11 11 11 11 11
+//     iNo = 11
+//     Output : 7
+//
+//  4. Input : N = 4
+//     Elements : 10 20 30 40
+//     iNo = 50
 //     Output : 0
-//
-//  2. Input : 5 → 2 4 6 8 10
-//     Even = 5, Odd = 0
-//     Output : 5
-//
-//  3. Input : 4 → 1 3 5 7
-//     Even = 0, Odd = 4
-//     Output : -4
-//
-//  4. Input : 7 → 11 22 33 44 55 66 77
-//     Even = 3, Odd = 4
-//     Output : -1
 //
 /////////////////////////////////////////////////////////////////////////
 
@@ -107,7 +112,7 @@ int main()
 //
 //                      Time Complexity :
 //
-//  FrequencyDiff() uses a loop that runs iLength times.
+//  Frequency() uses a loop that runs iLength times.
 //  Therefore : O(n)
 //
 //////////////////////////////////////////////////////////////////

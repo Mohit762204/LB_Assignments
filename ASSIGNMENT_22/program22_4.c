@@ -8,37 +8,32 @@
 
 /////////////////////////////////////////////////////////////////////////
 //
-//  Function Name : FrequencyDiff
-//  Description   : Returns difference between count of even and odd numbers.
+//  Function Name : Frequency
+//  Description   : Returns frequency of number 11 from the given array.
 //  Input         : Integer Array, Integer (Size of array)
-//  Output        : Integer (EvenCount - OddCount)
+//  Output        : Integer (Count of 11)
 //  Author        : Mohit Sandip Zalte
 //  Date          : 23/11/2025
 //
 /////////////////////////////////////////////////////////////////////////
 
-int FrequencyDiff(
-                    int Arr[],         // Array of numbers
-                    int iLength        // Number of elements
-                  )
+int Frequency(
+                int Arr[],         // Array of numbers
+                int iLength        // Number of elements
+             )
 {
     int iCnt = 0;
-    int EvenCount = 0;
-    int OddCount = 0;
+    int Count = 0;
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
-        if((Arr[iCnt] % 2) == 0)      // Even number
+        if(Arr[iCnt] == 11)        // Check for number 11
         {
-            EvenCount++;
-        }
-        else                          // Odd number
-        {
-            OddCount++;
+            Count++;
         }
     }
-    return EvenCount - OddCount;
-}   // End of FrequencyDiff()
+    return Count;
+}   // End of Frequency()
 
 /////////////////////////////////////////////////////////////////////////
 //
@@ -53,7 +48,7 @@ int main()
     int iRet = 0;         // To store result
     int *p = NULL;        // Pointer to dynamic array
 
-    printf("Enter Number Of Elements : ");
+    printf("Enter Number of Elements : ");
     scanf("%d",&iSize);
 
     p = (int*)malloc(iSize * sizeof(int));   // Memory allocation
@@ -72,9 +67,9 @@ int main()
         scanf("%d",&p[iCnt]);
     }
 
-    iRet = FrequencyDiff(p, iSize);
+    iRet = Frequency(p, iSize);
 
-    printf("Difference (Even - Odd) is : %d\n", iRet);
+    printf("Frequency of 11 is : %d\n", iRet);
 
     free(p);   // Release memory
 
@@ -85,21 +80,17 @@ int main()
 //
 //                              TEST CASES
 //
-//  1. Input : 6 → 10 21 30 41 50 61
-//     Even = 3, Odd = 3
+//  1. Input : 6 → 11 20 11 30 40 11
+//     Output : 3
+//
+//  2. Input : 5 → 1 2 3 4 5
 //     Output : 0
 //
-//  2. Input : 5 → 2 4 6 8 10
-//     Even = 5, Odd = 0
-//     Output : 5
+//  3. Input : 7 → 11 11 11 11 11 11 11
+//     Output : 7
 //
-//  3. Input : 4 → 1 3 5 7
-//     Even = 0, Odd = 4
-//     Output : -4
-//
-//  4. Input : 7 → 11 22 33 44 55 66 77
-//     Even = 3, Odd = 4
-//     Output : -1
+//  4. Input : 4 → 10 20 30 40
+//     Output : 0
 //
 /////////////////////////////////////////////////////////////////////////
 
@@ -107,7 +98,7 @@ int main()
 //
 //                      Time Complexity :
 //
-//  FrequencyDiff() uses a loop that runs iLength times.
+//  Frequency() uses a loop that runs iLength times.
 //  Therefore : O(n)
 //
 //////////////////////////////////////////////////////////////////
