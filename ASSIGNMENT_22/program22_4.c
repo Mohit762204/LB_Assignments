@@ -43,15 +43,15 @@ int Frequency(
 
 int main()
 {
-    int iSize = 0;        // To store number of elements
-    int iCnt = 0;         // Loop counter
-    int iRet = 0;         // To store result
-    int *p = NULL;        // Pointer to dynamic array
+    int iSize = 0;        
+    int iCnt = 0;         
+    int iRet = 0;         
+    int *p = NULL;        
 
     printf("Enter Number of Elements : ");
     scanf("%d",&iSize);
 
-    p = (int*)malloc(iSize * sizeof(int));   // Memory allocation
+    p = (int*)malloc(iSize * sizeof(int));   
 
     if(p == NULL)
     {
@@ -71,7 +71,7 @@ int main()
 
     printf("Frequency of 11 is : %d\n", iRet);
 
-    free(p);   // Release memory
+    free(p);   
 
     return 0;
 }   // End of main()
@@ -93,12 +93,3 @@ int main()
 //     Output : 0
 //
 /////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////
-//
-//                      Time Complexity :
-//
-//  Frequency() uses a loop that runs iLength times.
-//  Therefore : O(n)
-//
-//////////////////////////////////////////////////////////////////

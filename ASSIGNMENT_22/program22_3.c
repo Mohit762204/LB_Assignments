@@ -19,20 +19,20 @@
 /////////////////////////////////////////////////////////////////////////
 
 bool Check(
-               int Arr[],          // Array of elements
-               int iLength         // Size of array
+               int Arr[],          
+               int iLength       
           )
 {
     int iCnt = 0;
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
-        if(Arr[iCnt] == 11)        // If 11 found
+        if(Arr[iCnt] == 11)        
         {
             return true;
         }
     }
-    return false;                  // 11 not found
+    return false;                  
 }   // End of Check()
 
 /////////////////////////////////////////////////////////////////////////
@@ -43,15 +43,15 @@ bool Check(
 
 int main()
 {
-    int iSize = 0;                 // To store number of elements
-    int iCnt = 0;                  // Loop counter
-    int *p = NULL;                 // Pointer for dynamic array
-    bool bRet = false;             // To store result
+    int iSize = 0;                 
+    int iCnt = 0;                  
+    int *p = NULL;                 
+    bool bRet = false;             
 
     printf("Enter Number Of Elements : ");
     scanf("%d",&iSize);
 
-    p = (int*)malloc(iSize * sizeof(int));   // Dynamic memory allocation
+    p = (int*)malloc(iSize * sizeof(int));   
 
     if(p == NULL)
     {
@@ -78,7 +78,7 @@ int main()
         printf("11 is Absent\n");
     }
 
-    free(p);       // Free allocated memory
+    free(p);      
 
     return 0;
 }   // End of main()
@@ -100,12 +100,3 @@ int main()
 //  Output : 11 is Absent
 //
 /////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////
-//
-//                          Time Complexity :
-//
-//  In Check() function there is a loop that runs iLength times.
-//  Therefore : O(n)
-//
-//////////////////////////////////////////////////////////////////

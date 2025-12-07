@@ -18,8 +18,8 @@
 /////////////////////////////////////////////////////////////////////////
 
 int FrequencyDiff(
-                    int Arr[],         // Array of numbers
-                    int iLength        // Number of elements
+                    int Arr[],         
+                    int iLength        
                   )
 {
     int iCnt = 0;
@@ -28,11 +28,11 @@ int FrequencyDiff(
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
-        if((Arr[iCnt] % 2) == 0)      // Even number
+        if((Arr[iCnt] % 2) == 0)      
         {
             EvenCount++;
         }
-        else                          // Odd number
+        else                          
         {
             OddCount++;
         }
@@ -48,15 +48,15 @@ int FrequencyDiff(
 
 int main()
 {
-    int iSize = 0;        // To store number of elements
-    int iCnt = 0;         // Loop counter
-    int iRet = 0;         // To store result
-    int *p = NULL;        // Pointer to dynamic array
+    int iSize = 0;        
+    int iCnt = 0;         
+    int iRet = 0;         
+    int *p = NULL;        
 
     printf("Enter Number Of Elements : ");
     scanf("%d",&iSize);
 
-    p = (int*)malloc(iSize * sizeof(int));   // Memory allocation
+    p = (int*)malloc(iSize * sizeof(int));   
 
     if(p == NULL)
     {
@@ -102,12 +102,3 @@ int main()
 //     Output : -1
 //
 /////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////
-//
-//                      Time Complexity :
-//
-//  FrequencyDiff() uses a loop that runs iLength times.
-//  Therefore : O(n)
-//
-//////////////////////////////////////////////////////////////////

@@ -18,9 +18,9 @@
 /////////////////////////////////////////////////////////////////////////
 
 int Frequency(
-                int Arr[],         // Array of numbers
-                int iLength,       // Number of elements
-                int iNo            // Number to search
+                int Arr[],         
+                int iLength,       
+                int iNo            
              )
 {
     int iCnt = 0;
@@ -28,7 +28,7 @@ int Frequency(
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
-        if(Arr[iCnt] == iNo)       // Check for the given number
+        if(Arr[iCnt] == iNo)       
         {
             Count++;
         }
@@ -45,11 +45,11 @@ int Frequency(
 
 int main()
 {
-    int iSize = 0;        // To store number of elements
-    int iCnt = 0;         // Loop counter
-    int iValue = 0;       // Number whose frequency is to be found
-    int iRet = 0;         // To store result
-    int *p = NULL;        // Pointer to dynamic array
+    int iSize = 0;        
+    int iCnt = 0;         
+    int iValue = 0;       
+    int iRet = 0;         
+    int *p = NULL;        
 
     printf("Enter Number Of Elements : ");
     scanf("%d",&iSize);
@@ -57,7 +57,7 @@ int main()
     printf("Enter Number to Find Its Frequency : ");
     scanf("%d",&iValue);
 
-    p = (int*)malloc(iSize * sizeof(int));   // Memory allocation
+    p = (int*)malloc(iSize * sizeof(int));   
 
     if(p == NULL)
     {
@@ -107,12 +107,3 @@ int main()
 //     Output : 0
 //
 /////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////
-//
-//                      Time Complexity :
-//
-//  Frequency() uses a loop that runs iLength times.
-//  Therefore : O(n)
-//
-//////////////////////////////////////////////////////////////////

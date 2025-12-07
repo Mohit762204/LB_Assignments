@@ -18,8 +18,8 @@
 /////////////////////////////////////////////////////////////////////////
 
 int CountEven(
-                 int Arr[],       // Array of elements
-                 int iLength      // Size of array
+                 int Arr[],       
+                 int iLength      
               )
 {
     int iCnt = 0;
@@ -27,7 +27,7 @@ int CountEven(
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
-        if((Arr[iCnt] % 2) == 0)   // Check even
+        if((Arr[iCnt] % 2) == 0)   
         {
             iCount++;
         }
@@ -43,15 +43,15 @@ int CountEven(
 
 int main()
 {
-    int iSize = 0;               // Number of array elements
-    int iCnt = 0;                // Loop counter
-    int iRet = 0;                // To store result
-    int *p = NULL;               // Pointer to dynamic array
+    int iSize = 0;               
+    int iCnt = 0;                
+    int iRet = 0;                
+    int *p = NULL;               
 
     printf("Enter Number Of Elements : ");
     scanf("%d",&iSize);
 
-    p = (int*)malloc(iSize * sizeof(int));   // Dynamic memory allocation
+    p = (int*)malloc(iSize * sizeof(int));   
 
     if(p == NULL)
     {
@@ -93,12 +93,3 @@ int main()
 //     Output: 3
 //
 /////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////
-//
-//                        Time Complexity :
-//
-//  CountEven() contains a loop that runs iLength times.
-//  Therefore : O(n)
-//
-//////////////////////////////////////////////////////////////////
