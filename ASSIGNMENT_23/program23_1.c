@@ -27,9 +27,9 @@ typedef int BOOL;
 /////////////////////////////////////////////////////////////////////////
 
 BOOL Check(
-            int Arr[],       // Array of numbers
-            int iLength,     // Number of elements
-            int iNo          // Number to search
+            int Arr[],       
+            int iLength,     
+            int iNo          
           )
 {
     int iCnt = 0;
@@ -91,7 +91,7 @@ int main()
         printf("Number is Absent\n");
     }
 
-    free(p);   // Release memory
+    free(p);   
 
     return 0;
 }   // End of main()

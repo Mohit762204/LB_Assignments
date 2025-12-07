@@ -18,22 +18,22 @@
 /////////////////////////////////////////////////////////////////////////
 
 int FirstOccurrence(
-                    int Arr[],       // Array of numbers
-                    int iLength,     // Number of elements
-                    int iNo          // Number to search
+                    int Arr[],       
+                    int iLength,    
+                    int iNo         
                   )
 {
     int iCnt = 0;
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
-        if(Arr[iCnt] == iNo)      // Check for the number
+        if(Arr[iCnt] == iNo)      
         {
-            return iCnt;           // Return index of first occurrence
+            return iCnt;           
         }
     }
 
-    return -1;                    // Number not found
+    return -1;                    
 }   // End of FirstOccurrence()
 
 /////////////////////////////////////////////////////////////////////////
@@ -56,7 +56,7 @@ int main()
     printf("Enter the Number to Search: ");
     scanf("%d", &iValue);
 
-    p = (int *)malloc(iSize * sizeof(int));   // Memory allocation
+    p = (int *)malloc(iSize * sizeof(int));   
 
     if(p == NULL)
     {
@@ -83,7 +83,7 @@ int main()
         printf("%d is not present in the array.\n", iValue);
     }
 
-    free(p);   // Release memory
+    free(p);   
 
     return 0;
 }   // End of main()
@@ -110,11 +110,6 @@ int main()
 //
 //                          Time Complexity :
 //  Loop runs iLength times in worst case.
-//  Therefore : O(n)
-//
-//                          Space Complexity :
-//  Dynamic array used, O(n) space.
-//  Constant extra space otherwise.
 //  Therefore : O(n)
 //
 //////////////////////////////////////////////////////////////////

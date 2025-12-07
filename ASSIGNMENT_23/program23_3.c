@@ -53,7 +53,7 @@ int main()
     printf("Enter number of elements: ");
     scanf("%d", &iSize);
 
-    p = (int *)malloc(iSize * sizeof(int));      // Memory allocation
+    p = (int *)malloc(iSize * sizeof(int));         
     if(p == NULL)
     {
         printf("Unable to allocate memory\n");
