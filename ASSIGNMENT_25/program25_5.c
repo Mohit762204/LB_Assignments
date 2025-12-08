@@ -1,0 +1,99 @@
+/////////////////////////////////////////////////////////////////////////
+//
+//                      Required Header Files
+//
+/////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+
+///////////////////////////////////////////////////////////////
+//  Function Name : Display
+//  Description   : Displays all elements from array that are 
+//                  multiples of 11
+//  Input         : Integer Array, Length
+//  Output        : None (Displays elements on screen)
+//  Author        : Mohit Sandip Zalte
+//  Date          : 08/12/2025
+///////////////////////////////////////////////////////////////
+void Display(int Arr[], int iLength)
+{
+    int iCnt = 0;
+    int found = 0;
+
+    printf("\nElements that are multiples of 11:\n");
+    for(iCnt = 0; iCnt < iLength; iCnt++)
+    {
+        if(Arr[iCnt] % 11 == 0)
+        {
+            printf("%d\t", Arr[iCnt]);
+            found = 1;
+        }
+    }
+
+    if(found == 0)
+    {
+        printf("No elements found that are multiples of 11.");
+    }
+    printf("\n");
+}
+
+///////////////////////////////////////////////////////////////
+//  Main Function
+///////////////////////////////////////////////////////////////
+int main()
+{
+    int iSize = 0;
+    int *P = NULL;
+    int iCnt = 0;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &iSize);
+
+    if(iSize <= 0)
+    {
+        printf("Invalid size. Terminating program.\n");
+        return -1;
+    }
+
+    P = (int *)malloc(iSize * sizeof(int));
+
+    if(P == NULL)
+    {
+        printf("Memory allocation failed!\n");
+        return -1;
+    }
+
+    printf("\nEnter %d elements:\n", iSize);
+    for(iCnt = 0; iCnt < iSize; iCnt++)
+    {
+        printf("Element %d: ", iCnt + 1);
+        scanf("%d", &P[iCnt]);
+    }
+
+    Display(P, iSize);
+
+    free(P);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////
+//
+//                              TEST CASE
+//
+//  Enter number of elements: 7
+//    Enter 7 elements:
+//    Element 1: 22
+//    Element 2: 33
+//    Element 3: 5
+//    Element 4: 44
+//    Element 5: 12
+//    Element 6: 7
+//    Element 7: 11
+//
+//  Output:
+//  Elements that are multiples of 11:
+//  22    33    44    11
+//
+/////////////////////////////////////////////////////////////////////////
