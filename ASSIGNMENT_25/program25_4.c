@@ -12,7 +12,7 @@
 //  Description   : Displays all elements from array that are 
 //                  divisible by both 3 and 5
 //  Input         : Integer Array, Length
-//  Output        : None (Displays elements on screen)
+//  Output        : Displays elements on screen
 //  Author        : Mohit Sandip Zalte
 //  Date          : 08/12/2025
 ///////////////////////////////////////////////////////////////
