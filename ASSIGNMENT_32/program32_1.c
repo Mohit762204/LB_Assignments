@@ -16,7 +16,7 @@ void Pattern(int iRow, int iCol)
     {
         for(j = 1; j <= iCol; j++)
         {
-            if(i + j == iCol + 1)     // Reverse diagonal condition
+            if(i + j == iCol + 1)     
             {
                 printf("#\t");
             }
